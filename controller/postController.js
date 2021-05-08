@@ -1,15 +1,6 @@
 import { LIST } from '../models/postModel';
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database(
-  './db/rent_acc.db',
-  sqlite3.OPEN_READWRITE,
-  (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to DB');
-  }
-);
+
+import db from '../db/db';
 
 export const test = (req, res) => {
   res.status(200).send('hello world');
@@ -31,6 +22,6 @@ export const getAccommodation = (req, res) => {
       return console.error(err.message);
     }
     console.log('1', row);
-    res.send(row);
+    res.status(200).send(row);
   });
 };
