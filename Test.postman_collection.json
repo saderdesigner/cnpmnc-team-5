@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "4a877c62-59f4-49ca-b14c-9efcf8520186",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get accommodations list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/accommodations",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get accommodation by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/accommodations/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodations",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/accommodationsSearch?address=post",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodationsSearch"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "post"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/accommodationsSearch?min=10&max=1100001",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodationsSearch"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "10"
+						},
+						{
+							"key": "max",
+							"value": "1100001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create accommodation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ADDRESS\": \"Postman - Quan 11\",\n    \"PRICE\": 1100001,\n    \"MAX\": 2,\n    \"OWNER\": \"1\",\n    \"IMAGE\": \"https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3289&q=80\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/accommodations",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update accommodation",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ADDRESS\": \"Postman - Quan 12\",\n    \"PRICE\": 1100001,\n    \"MAX\": 2,\n    \"OWNER\": \"1\",\n    \"IMAGE\": \"https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3289&q=80\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/accommodations/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodations",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete accommodation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/accommodations/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accommodations",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
